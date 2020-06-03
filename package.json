@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/laurencedorman/google-maps-api-loader.git"
+    "url": "git+ssh://git@github.com/pnutmath/google-maps-api-loader.git"
   },
   "keywords": [
     "google-maps",
@@ -20,16 +20,16 @@
   "author": "laurencedorman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laurencedorman/google-maps-api-loader/issues"
+    "url": "https://github.com/pnutmath/google-maps-api-loader/issues"
   },
-  "homepage": "https://github.com/laurencedorman/google-maps-api-loader#readme",
+  "homepage": "https://github.com/pnutmath/google-maps-api-loader#readme",
   "dependencies": {
-    "es6-promise": "^4.0.5"
+    "es6-promise": "^4.2.8"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "jscs": "^3.0.3",
+    "jscs": "^3.0.7",
     "mocha": "^5.0.1"
   }
 }

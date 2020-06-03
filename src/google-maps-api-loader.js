@@ -4,23 +4,28 @@ var Promise = require('es6-promise').Promise;
 var urlBuilder = require('../lib/url-builder.js');
 
 var googleApi;
+var isMapLoaded = false;
 
 function loadAutoCompleteAPI(params) {
-  var script = document.createElement('script');
+  if (!isMapLoaded) {
+    isMapLoaded = true;
+    var script = document.createElement('script');
 
-  script.type = 'text/javascript';
+    script.type = 'text/javascript';
 
-  script.src = urlBuilder({
-    base: 'https://maps.googleapis.com/maps/api/js',
-    libraries: params.libraries || [],
-    callback: 'googleMapsAutoCompleteAPILoad',
-    apiKey: params.apiKey,
-    client: params.client,
-    language: params.language,
-    version: params.version
-  });
+    script.src = urlBuilder({
+      base: 'https://maps.googleapis.com/maps/api/js',
+      libraries: params.libraries || [],
+      sensor: false,
+      callback: 'googleMapsAutoCompleteAPILoad',
+      apiKey: params.apiKey,
+      client: params.client,
+      language: params.language,
+      version: params.version
+    });
 
-  document.querySelector('head').appendChild(script);
+    document.querySelector('head').appendChild(script);
+  }
 }
 
 /**
